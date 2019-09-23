@@ -11,7 +11,7 @@ artifacts:
       - build/builds.7z
 
 commands:
-  - git clone https://github.com/openssl/openssl
+  - git clone https://github.com/openssl/openssl /home/bokken/build/output/Unity-Technologies/qtbase/openssl
   - git -C /home/bokken/build/output/Unity-Technologies/qtbase/openssl checkout -b 1.0.2 origin/OpenSSL_1_0_2-stable
   - sudo mount --bind /dev /toolchains/linux/dev
   - mkdir /toolchains/linux/qtbase
