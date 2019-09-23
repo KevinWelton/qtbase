@@ -12,11 +12,11 @@ artifacts:
 
 commands:
   - sleep 180
-  - git clone https://github.com/openssl/openssl /home/bokken/build/output/Unity-Technologies/qtbase/openssl
-  - git -C /home/bokken/build/output/Unity-Technologies/qtbase/openssl checkout -b 1.0.2 origin/OpenSSL_1_0_2-stable
+  - git clone https://github.com/openssl/openssl
+  - git -C /home/bokken/build/output/KevinWelton/qtbase/openssl checkout -b 1.0.2 origin/OpenSSL_1_0_2-stable
   - sudo mount --bind /dev /toolchains/linux/dev
   - mkdir /toolchains/linux/qtbase
-  - sudo mount --bind /home/bokken/build/output/Unity-Technologies/qtbase /toolchains/linux/qtbase
+  - sudo mount --bind /home/bokken/build/output/KevinWelton/qtbase /toolchains/linux/qtbase
   - sudo chroot --userspec=bokken:bokken /toolchains/linux sh -c "cd /qtbase ; perl build.pl --arch=64"
 
 triggers:
