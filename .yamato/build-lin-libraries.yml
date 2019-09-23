@@ -11,7 +11,6 @@ artifacts:
       - build/builds.7z
 
 commands:
-  - sleep 180
   - git clone https://github.com/openssl/openssl
   - git -C /home/bokken/build/output/KevinWelton/qtbase/openssl checkout -b 1.0.2 origin/OpenSSL_1_0_2-stable
   - sudo mount --bind /dev /toolchains/linux/dev
